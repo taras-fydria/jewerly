@@ -22,8 +22,15 @@ body {
 a {
 	text-decoration: none;
 	color: $color-main-text;
+	&:hover{
+		opacity: 0.5;
+	}
 }
 
+
+svg{
+	fill: $color-main-text;
+}
 /* Layout */
 .ba-container {
 	padding-left: 20px;
@@ -103,6 +110,9 @@ textarea {}
 			color: $color-main-text;
 			text-transform: uppercase;
 		}
+		&--right{
+			color: $color-icons;
+		}
 	}
 
 	&__bottom {
@@ -125,4 +135,89 @@ textarea {}
 			}
 		}
 	}
+}
+
+// MAIN
+// MAIN
+// MAIN
+main{
+	padding: 200px 0;
+}
+
+.ba-footer{
+	padding: 35px 0 16px;
+	&__content{
+		text-align: center;
+		text-transform: uppercase;
+		font-size: 14px;
+		letter-spacing: 0.05em;
+
+	}
+	&__socials{
+		margin-bottom: 26px;
+		
+	}
+	&__links+&__links{
+		padding-left: 13px;
+	}
+	&__subscribe{
+		margin-bottom: 26px;
+	}
+	&__tel{
+		margin-bottom:60px;
+		display: block;
+	}
+	&__copyright--left{
+		text-align: right;
+		position: relative;
+
+	}&__copyright--right{
+		text-align: left;
+		text-transform: lowercase;
+		position: relative;
+		a::first-letter{
+			text-transform: capitalize;
+		}
+		&:before{
+			display: block;
+			content: "";
+			width: 1px;
+			height: 60px;
+			background-color: $color-icons ;
+			position: absolute;
+			left: 14px;
+			top: -26px;
+
+		}
+
+	}
+	&__lady{
+		position: absolute;
+		left: 0;
+		top: -75px;	
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		span{
+			font-size: 16px;
+			position: relative;
+			&::after{
+				display: block;
+				position: absolute;
+				height: 1px;
+				width: 3000px;
+				overflow: hidden;
+				content: "";
+				background: $color-icons;
+				left: -2887px;
+
+			}
+			
+		}
+		svg{
+			margin-right: 10px;
+			margin-top: 10px;
+		}
+	}
+
 }
