@@ -13,24 +13,51 @@ $color-radial: #41c3ca+#F9F9F9;
 body {
 	font-family: Roboto;
 	font-weight: 400;
-	font-size: 14px;
-	letter-spacing: 5px;
+	font-size: 12px;
+	letter-spacing: 0.05em;
 	line-height: 100%;
 	color: $color-main-text;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+	margin: 0 0 10px;
+}
+
+.ba-title-1 {
+	font-size: 16px;
+	text-transform: uppercase;
+	font-weight: 700;
+	line-height: 1.1;
+	margin-bottom: 43px;
+
+}
+
+.ba-title-2 {
+	font-size: 12px;
+	font-weight: 700;
+	line-height: 1.1;
 }
 
 a {
 	text-decoration: none;
 	color: $color-main-text;
-	&:hover{
+
+	&:hover {
 		opacity: 0.5;
 	}
 }
 
 
-svg{
+svg {
 	fill: $color-main-text;
 }
+
 /* Layout */
 .ba-container {
 	padding-left: 20px;
@@ -51,6 +78,19 @@ input[type="button"],
 button,
 .ba-button {
 	display: inline-block;
+	margin: 60px 0 50px;
+	font-size: 16px;
+	text-transform: uppercase;
+	font-weight: 700;
+	background: #fff;
+	border: 1px solid $color-icons;
+	height: 45px;
+	width: 225px;
+	text-align: center;
+
+	&:hover {
+		opacity: 0.5;
+	}
 }
 
 input[type="submit"]:hover,
@@ -110,7 +150,8 @@ textarea {}
 			color: $color-main-text;
 			text-transform: uppercase;
 		}
-		&--right{
+
+		&--right {
 			color: $color-icons;
 		}
 	}
@@ -140,50 +181,92 @@ textarea {}
 // MAIN
 // MAIN
 // MAIN
-main{
-	padding: 200px 0;
+.ba-main {
+	padding: 200px 0 100px;
+	position: relative;
+
+
 }
 
-.ba-footer{
+.ba-absolute {
+	position: relative;
+
+	&__img {
+		position: absolute;
+		right: 0;
+		bottom: -199px;
+		transform: rotate(20.58deg);
+	}
+}
+
+.ba-description {
+	&__material {
+		padding: 45px 0;
+
+	}
+
+	&__contact {
+		.ba-title-2 {
+			margin-bottom: 45px;
+		}
+	}
+}
+
+// FOOTER
+// FOOTER
+// FOOTER
+.ba-footer {
 	padding: 35px 0 16px;
-	&__content{
+
+	&__content {
 		text-align: center;
 		text-transform: uppercase;
 		font-size: 14px;
 		letter-spacing: 0.05em;
+		border-top: 15px solid $color-decoration;
+		padding-top: 35px;
 
 	}
-	&__socials{
+
+	&__socials {
 		margin-bottom: 26px;
-		
+
 	}
-	&__links+&__links{
+
+	&__links+&__links {
 		padding-left: 13px;
 	}
-	&__subscribe{
+
+	&__subscribe {
 		margin-bottom: 26px;
 	}
-	&__tel{
-		margin-bottom:60px;
+
+	&__tel {
+		margin-bottom: 60px;
 		display: block;
 	}
-	&__copyright--left{
+
+	&__copyright--left {
 		text-align: right;
 		position: relative;
 
-	}&__copyright--right{
+	}
+
+	&__copyright--right {
 		text-align: left;
 		text-transform: lowercase;
 		position: relative;
-		a::first-letter{
+
+		a::first-letter {
 			text-transform: capitalize;
 		}
-		&:before{
+
+		&:before {
 			display: block;
 			content: "";
 			width: 1px;
 			height: 60px;
-			background-color: $color-icons ;
+			background-color: $color-icons;
 			position: absolute;
 			left: 14px;
 			top: -26px;
@@ -191,17 +274,20 @@ main{
 		}
 
 	}
-	&__lady{
+
+	&__lady {
 		position: absolute;
 		left: 0;
-		top: -75px;	
+		top: -75px;
 		display: flex;
 		flex-direction: column;
 		align-items: center;
-		span{
+
+		span {
 			font-size: 16px;
 			position: relative;
-			&::after{
+
+			&::after {
 				display: block;
 				position: absolute;
 				height: 1px;
@@ -212,9 +298,10 @@ main{
 				left: -2887px;
 
 			}
-			
+
 		}
-		svg{
+
+		svg {
 			margin-right: 10px;
 			margin-top: 10px;
 		}
