@@ -39,6 +39,14 @@ p {
 }
 
 .ba-title-2 {
+	font-size: 24px;
+	text-transform: uppercase;
+	font-weight: 300;
+	line-height: 1.1;
+	margin-bottom: 10px;
+}
+
+.ba-title-3 {
 	font-size: 12px;
 	font-weight: 700;
 	line-height: 1.1;
@@ -182,7 +190,7 @@ textarea {}
 // MAIN
 // MAIN
 .ba-main {
-	padding: 200px 0 100px;
+	padding: 100px 0 100px;
 	position: relative;
 
 
@@ -307,4 +315,73 @@ textarea {}
 		}
 	}
 
+}
+
+// KATALOG
+// KATALOG
+// KATALOG
+
+.ba-katalog {
+
+
+	&__card {
+		display: flex;
+		flex-direction: column;
+		margin-bottom: 20px;
+
+		&:nth-child(2) {
+			flex-direction: column-reverse;
+		}
+	}
+
+	&__title {
+		position: relative;
+
+		.ba-title-2 {
+			text-align: right;
+
+			&::before {
+				display: block;
+				content: "";
+				background: $color-icons;
+				height: 1px;
+				width: 277px;
+				position: absolute;
+				left: 0;
+				top: calc(50% - 1px);
+			}
+
+		}
+	}
+
+	&__img {
+		position: relative;
+		text-transform: uppercase;
+		z-index: 1;
+
+		img::after {
+			position: absolute;
+			display: block;
+			content: "";
+			height: 1px;
+			width: 177px;
+			// background: linear-gradient(left, rgba(0, 0, 0, 0.65) 0%, rgba(0, 0, 0, 0) 100%);
+			background: fuchsia;
+			z-index: 2;
+		}
+	}
+
+	&__name {
+		position: absolute;
+		bottom: 60px;
+		right: 140px;
+		z-index: 2;
+	}
+
+	&__link {
+		position: absolute;
+		bottom: 20px;
+		right: 80px;
+		z-index: 2;
+	}
 }
