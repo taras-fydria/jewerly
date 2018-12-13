@@ -1,6 +1,7 @@
 @import "layout";
 @import "normalize";
 @import url('https://fonts.googleapis.com/css?family=Roboto:300,400,700');
+@import "slick";
 
 
 $color-main-text: #050409;
@@ -189,11 +190,23 @@ textarea {}
 // MAIN
 // MAIN
 // MAIN
+
+
 .ba-main {
-	padding: 100px 0 100px;
+	padding: 50px 0 100px;
 	position: relative;
 
 
+}
+
+.ba-hero {
+	&__slider {
+		margin: 0 auto;
+
+		img {
+			margin: 0 auto;
+		}
+	}
 }
 
 .ba-absolute {
@@ -428,7 +441,8 @@ textarea {}
 		color: $color-decoration;
 		right: 15px;
 		bottom: -47px;
-		&:active{
+
+		&:active {
 			height: 30px;
 			width: 30px;
 		}
@@ -440,5 +454,90 @@ textarea {}
 		font-size: 14px;
 		text-transform: uppercase;
 
+	}
+}
+
+// DETAILS
+// DETAILS
+// DETAILS
+
+.ba-description {
+	padding-bottom: 45px;
+
+	&__back {
+		font-weight: 300;
+		text-transform: uppercase;
+		font-size: 14px;
+		// padding-bottom: 40px;
+
+	}
+
+	&__row {
+		padding: 40px 0;
+	}
+
+	&__slider {
+		&--bottom {
+			.slick-lis {
+				padding: 0;
+
+				// display: flex;
+				// justify-content: space-between;
+				// align-items: center;
+			}
+		}
+	}
+
+	&__right {
+		display: flex;
+		flex-direction: column;
+	}
+
+	&__subtitle {
+		font-size: 12px;
+		font-weight: 400;
+		text-transform: uppercase;
+
+	}
+
+	&__title {
+		margin-bottom: 15px;
+	}
+
+	&__like {
+		margin-top: 28px;
+		margin-bottom: 40px;
+		display: flex;
+		align-items: flex-end;
+		justify-content: flex-start;
+
+		p {
+			text-transform: uppercase;
+		}
+
+		svg {
+			margin-right: 20px;
+		}
+	}
+
+	&__clients {
+		margin-top: 60px;
+	}
+}
+
+
+.ba-more {
+	.ba-title-1 {
+		text-align: center;
+		margin-bottom: 50px;
+	}
+
+	&__col {
+		padding-right: 40px;
+		text-align: center;
+
+		img {
+			margin-bottom: 20px;
+		}
 	}
 }
